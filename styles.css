@@ -91,19 +91,25 @@ main {
 
 #projects {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    border: solid;
+}
+
+.project-section {
+    max-width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .project-card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: antiquewhite;
     transition: 0.1s;
-    width: 22%;
-    border: solid;
+    width: 40%;
 }
 
 .project-card:hover {
@@ -113,13 +119,38 @@ main {
 .project-content {
     padding: 2px 16px;
     text-align: center;
-    border: solid;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     #projects {
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
+    }
+    .project-section {
+        max-width: 70%;
+    }
+    .project-card {
+        margin: 10px 0px;
+        width: 30%;
+    }
+}
+
+@media (max-width: 400px) {
+    #projects {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .project-section {
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 70%;
+    }
+    .project-card {
+        margin: 10px 0px;
+        width: 30%;
+    }
+    h5 {
+        font-size: xx-small;
     }
 }
 
@@ -132,7 +163,6 @@ footer {
     align-items: center;
     background-color: bisque;
     width: 100%;
-    border: solid;
 }
 
 .social-contact {
@@ -143,7 +173,6 @@ footer {
     margin-left: 5%;
     margin-right: 5%;
     flex-grow: 2;
-    border: solid;
 }
 
 .traditional-contact {
@@ -155,5 +184,4 @@ footer {
     margin-left: 5%;
     margin-right: 5%;
     flex-grow: 1;
-    border: solid;
 }
