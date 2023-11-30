@@ -1,0 +1,159 @@
+body {
+    background-color: beige;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    background-color: bisque;
+    top: 0;
+    width: 100%;
+}
+
+.title {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.top-nav-padding {
+    flex-grow: 6;
+}
+
+.top-nav-links {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+a.top-nav-link {
+    border-style: solid;
+    border-color: black;
+    color: black;
+    border-radius: 15%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.top-nav-links a:hover {
+    border-style: solid;
+    color: white;
+    background-color: gray;
+    border-color: gray;
+    border-radius: 15%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.top-nav-links a:active {
+    border-style: solid;
+    color: white;
+    background-color: black;
+    border-color: black;
+    border-radius: 15%;
+    padding: 5px;
+    margin: 5px;
+}
+
+main {
+    margin: 2%;
+}
+
+#about-me {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-me-img {
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 25%;
+    padding-bottom: 2%;
+}
+
+.about-me-content {
+    padding-bottom: 2%;
+}
+
+#skills {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#projects {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    border: solid;
+}
+
+.project-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: antiquewhite;
+    transition: 0.1s;
+    width: 22%;
+    border: solid;
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.project-content {
+    padding: 2px 16px;
+    text-align: center;
+    border: solid;
+}
+
+@media (max-width: 700px) {
+    #projects {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+footer {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: bisque;
+    width: 100%;
+    border: solid;
+}
+
+.social-contact {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    flex-grow: 2;
+    border: solid;
+}
+
+.traditional-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: end;
+    margin-left: 5%;
+    margin-right: 5%;
+    flex-grow: 1;
+    border: solid;
+}
