@@ -1,7 +1,13 @@
+/**
+ * body contains header(contains top nav information), main (contains about me, skills and projects), footer (contains contact information)
+*/
 body {
     background-color: beige;
 }
 
+/**
+ * top nav styling, top-nav is a flexbox as a row which contains page title and internal hyperlinks.
+**/
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -9,26 +15,23 @@ body {
     flex-wrap: wrap;
     background-color: bisque;
     top: 0;
-    width: 100%;
+    padding: 0% 5%;
 }
 
+/* titile */
 .title {
-    flex-grow: 1;
     text-align: center;
 }
 
-.top-nav-padding {
-    flex-grow: 6;
-}
-
+/* top nav links container is a flexbox column which contains internal hyperlinlks */
 .top-nav-links {
-    flex-grow: 1;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: baseline;
 }
 
+/* top nav hyperlink default styling */
 a.top-nav-link {
     border-style: solid;
     border-color: black;
@@ -38,6 +41,7 @@ a.top-nav-link {
     margin: 5px;
 }
 
+/* top nav hyperlink hover styling */
 .top-nav-links a:hover {
     border-style: solid;
     color: white;
@@ -48,6 +52,7 @@ a.top-nav-link {
     margin: 5px;
 }
 
+/* top nav hyperlink pressed/clicked styling */
 .top-nav-links a:active {
     border-style: solid;
     color: white;
@@ -58,10 +63,17 @@ a.top-nav-link {
     margin: 5px;
 }
 
+
+/**
+ * main contains about me, skills and projects
+*/
 main {
     margin: 2%;
 }
 
+/**
+ * about me is a flexbox column which contains a image and content
+ */
 #about-me {
     display: flex;
     justify-content: space-evenly;
@@ -70,6 +82,7 @@ main {
     flex-wrap: wrap;
 }
 
+/* about me image */
 .about-me-img {
     width: 50%;
     max-width: 500px;
@@ -78,10 +91,14 @@ main {
     padding-bottom: 2%;
 }
 
+/* about me content */
 .about-me-content {
     padding-bottom: 2%;
 }
 
+/**
+ * skills is a flexbox row which contains sections
+ */
 #skills {
     display: flex;
     justify-content: space-around;
@@ -89,6 +106,9 @@ main {
     flex-wrap: wrap;
 }
 
+/**
+ * projects is a flexbox row which contains project section's
+ */
 #projects {
     display: flex;
     justify-content: space-evenly;
@@ -97,6 +117,7 @@ main {
     flex-wrap: wrap;
 }
 
+/* project section is a flexbox row which contains project card and project content */
 .project-section {
     max-width: 40%;
     display: flex;
@@ -105,6 +126,7 @@ main {
     flex-wrap: wrap;
 }
 
+/* project card has box shawdows that is black */
 .project-card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: antiquewhite;
@@ -112,48 +134,60 @@ main {
     width: 40%;
 }
 
+/* project card has box shawdows that are intesivided on hover */
 .project-card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* project content */
 .project-content {
     padding: 2px 16px;
     text-align: center;
 }
 
+/* project media query, makes projects a column for medium sized screens */
 @media (max-width: 900px) {
     #projects {
         flex-direction: column;
         justify-content: space-between;
     }
+
     .project-section {
         max-width: 70%;
     }
+
     .project-card {
         margin: 10px 0px;
         width: 30%;
     }
 }
 
+/* project media query, makes projects and its subsections a column for small sized screens */
 @media (max-width: 400px) {
     #projects {
         flex-direction: column;
         justify-content: space-between;
     }
+
     .project-section {
         flex-direction: column;
         justify-content: space-between;
         max-width: 70%;
     }
+
     .project-card {
         margin: 10px 0px;
         width: 30%;
     }
+
     h5 {
         font-size: xx-small;
     }
 }
 
+/**
+ * Footer styling, footer is a flexbox as a row which contains social & traditional contact information.
+**/
 footer {
     padding-top: 2%;
     padding-bottom: 2%;
@@ -165,16 +199,18 @@ footer {
     width: 100%;
 }
 
+/* social contact is a flexbox row which contains social media icons & links */
 .social-contact {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: baseline;
     margin-left: 5%;
     margin-right: 5%;
     flex-grow: 2;
 }
 
+/* traditional contact is a flexbox column which contains traditional contact(phone,address,email) icons & links */
 .traditional-contact {
     display: flex;
     flex-direction: column;
