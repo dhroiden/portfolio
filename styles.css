@@ -15,7 +15,7 @@ body {
     flex-wrap: wrap;
     background-color: bisque;
     top: 0;
-    padding: 0% 5%;
+    padding: 0% 2%;
 }
 
 /* titile */
@@ -74,7 +74,7 @@ main {
 /**
  * about me is a flexbox column which contains a image and content
  */
-#about-me {
+.about-me {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -99,7 +99,7 @@ main {
 /**
  * skills is a flexbox row which contains sections
  */
-#skills {
+.skills {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -109,7 +109,7 @@ main {
 /**
  * projects is a flexbox row which contains project section's
  */
-#projects {
+.projects {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
@@ -189,24 +189,24 @@ main {
  * Footer styling, footer is a flexbox as a row which contains social & traditional contact information.
 **/
 footer {
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding: 2% 2%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center;
     background-color: bisque;
     width: 100%;
+}
+
+.social-title {
+    flex-grow: 1;
 }
 
 /* social contact is a flexbox row which contains social media icons & links */
 .social-contact {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    align-items: baseline;
-    margin-left: 5%;
-    margin-right: 5%;
+    align-items: center;
     flex-grow: 2;
 }
 
@@ -216,8 +216,6 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-items: end;
-    margin-left: 5%;
-    margin-right: 5%;
+    align-items: flex-start;
     flex-grow: 1;
 }
